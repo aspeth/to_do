@@ -61,14 +61,17 @@ const Form = ({ addTodo }) => {
     setValue("")
   }
   return (
-    <form onSubmit={submit}>
-      <h2>New Todo</h2>
-      <input type="text"
-        className="todoinput"
-        value={value}
-        placeholder="Thing to do"
-        onChange={(event) => setValue(event.target.value)} />
-    </form>
+    <>
+      <form onSubmit={submit}>
+        <h2>New Todo</h2>
+        <input type="text"
+          className="todoinput"
+          value={value}
+          placeholder="Thing to do"
+          onChange={(event) => setValue(event.target.value)} />
+      </form>
+      <button>Submit</button>
+    </>
   )
 }
 
